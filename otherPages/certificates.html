@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates - Jahirul Islam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      padding: 2rem;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #4caf50;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 1rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    tbody tr:nth-child(odd) {
+      background-color: #e6ffe6;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f0f8ff;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+      }
+
+      tr {
+        margin-bottom: 1rem;
+      }
+
+      td {
+        border: none;
+        padding: 0.5rem;
+        background: #f0f8ff;
+      }
+
+      td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        color: #4caf50;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Certificates</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Description</th>
+          <th>Certificate Link</th>
+        </tr>
+      </thead>
+      <tbody id="certificateTable"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const certificates = [
+      { description: "Presenter - ICNSBT 2025 (HIT Haldia)", link: "https://drive.google.com/file/d/1icIF3B1xhY3m2VRHaKcuX9kKiM484oWv/view?usp=sharing" },
+      { description: "Research Paper - ISAI 2025 (NIT Sikkim)", link: "certificates/research_isai.pdf" },
+      { description: "Web Development Bootcamp - 2024", link: "certificates/web_bootcamp.pdf" }
+    ];
+
+    const table = document.getElementById('certificateTable');
+
+    certificates.forEach((cert, index) => {
+      const row = document.createElement('tr');
+      row.innerHTML = `
+        <td data-label="#">${index + 1}</td>
+        <td data-label="Description">${cert.description}</td>
+        <td data-label="Certificate Link"><a href="${cert.link}" target="_blank">View</a></td>
+      `;
+      table.appendChild(row);
+    });
+  </script>
+</body>
+</html>

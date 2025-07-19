@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Developer & AI/ML</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+  <nav>
+    <div class="logo"></div>
+    <ul>
+      <li><a href="otherPages/about.html">About</a></li>
+      <li>
+        <a href="#">Projects</a>
+        <ul>
+          <li><a href="/otherPages/webDev.html">WebDev</a></li>
+          <li><a href="/otherPages/projectML.html">AI/ML</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Social</a>
+        <ul>
+          <li><a href="https://github.com/MrFailure777">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jahirul-islam-r777/">LinkedIn</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-img">
+      <img src="Images/profile_img.png" alt="Profile Photo">
+    </div>
+    <div class="hero-text">
+      <h1>JAHIRUL ISLAM</h1>
+      <p>DEVELOPER AND AI/ML ENTHUSIAST</p>
+      <div class="buttons">
+        <a href="documents/Jahirul_Resume.pdf" download>Download CV</a>
+        <a href="/otherPages/certificates.html">Certificates</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+      <div class="underline-img">
+    <img src="Images/underline.png" alt="underline" width="200px">
+  </div>
+    <form action="https://formsubmit.co/jahirulislamofficial5353@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <!-- <input type="hidden" name="_next" value="otherPages/thankyou.html"> -->
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="email" placeholder="Your Email" required />
+      <textarea name="query" placeholder="Your Query" required ></textarea>
+      <button type="submit" id="sendBtn">Send</button>
+    </form>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

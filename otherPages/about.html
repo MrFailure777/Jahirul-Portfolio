@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Jahirul Islam</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Intel One Mono', monospace;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+    }
+
+    .about-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .about-container h1 {
+      font-size: 2.5rem;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .about-container img.profile {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 4px solid #4caf50;
+    }
+
+    .about-container p {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .skills, .publications, .contact-info {
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .skills h2, .publications h2, .contact-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #444;
+    }
+
+    .skills ul, .publications ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .skills li::before, .publications li::before {
+      content: "\2022";
+      color: #4caf50;
+      font-weight: bold;
+      display: inline-block; 
+      width: 1em;
+    }
+
+    .contact-info p {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-info img {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .about-container {
+        padding: 1rem;
+      }
+
+      .about-container h1 {
+        font-size: 2rem;
+      }
+
+      .about-container p {
+        font-size: 1rem;
+      }
+
+      .skills h2, .publications h2, .contact-info h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="about-container">
+    <img src="/Images/profile_img.png" alt="Jahirul Islam" class="profile">
+    <h1>Jahirul Islam</h1>
+    <p>Hi! I'm Jahirul Islam, a passionate developer and researcher in AI/ML and cybersecurity. I specialize in building modern, intelligent web applications and conducting impactful research in phishing detection.</p>
+
+    <p>I completed my B.Sc. in Computer Science from Dum Dum Motijheel College with a CGPA of 9.17 and am pursuing MCA from MAKAUT University with a CGPA of 8.34.</p>
+
+    <p>I love working on real-world problems and have experience in ML, phishing detection, Python, and web frameworks like Django and React. I'm curious, self-motivated, and love exploring new technologies.</p>
+
+    <div class="contact-info">
+      <h2>Contact</h2>
+      <p><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email"> jahirulislamofficial5353@gmail.com</p>
+      <p><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone"> +91-8116158818</p>
+    </div>
+
+    <div class="skills">
+      <h2>Skills & Interests</h2>
+      <ul>
+        <li>Web Development (HTML, CSS, JavaScript, React, Django)</li>
+        <li>Machine Learning & Data Science</li>
+        <li>Cybersecurity & Phishing Detection</li>
+        <li>SAP MM (Learning)</li>
+        <li>Teamwork, Communication & Leadership</li>
+      </ul>
+    </div>
+
+    <div class="publications">
+      <h2>Publications</h2>
+      <ul>
+        <li>Jahirul Islam, Chanchal Patra, Pritam Kumar Mani, Debasis Giri, “Phishing URL Detection via Machine Learning: A Comprehensive Survey,” ICNSBT 2025, HIT Haldia, Jan 14, 2025.</li>
+        <li>Pritam Kumar Mani, Jahirul Islam, Chanchal Patra, Debasis Giri, “Beyond Traditional Methods: A Critical Analysis of Machine Learning in Phishing Email Detection,” ISAI 2025, NIT Sikkim, Feb 04, 2025.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
