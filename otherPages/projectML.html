@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificates - Jahirul Islam</title>
+  <title>ML Projects - Jahirul Islam</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,122 +15,148 @@
     }
 
     body {
-      background: #f9f9f9;
+      /* background: #babaee; */
+      background: rgb(11, 11, 30);
+      background-image: url("../Images/bg.png");
       padding: 2rem;
       color: #333;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
-      background: #fff;
       padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     h1 {
       text-align: center;
       margin-bottom: 2rem;
-      color: #4caf50;
+      color: #f9f9f9;
+      font-size: 4rem;
     }
 
-    table {
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
       width: 100%;
-      border-collapse: collapse;
+      height: 180px;
+      object-fit: cover;
     }
 
-    th, td {
-      padding: 1rem;
-      border: 1px solid #ccc;
-      text-align: left;
+    .card-content {
+      padding: 1.5rem;
     }
 
-    th {
-      background-color: #4caf50;
+    .card-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #222;
+    }
+
+    .card-content p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+
+    .card-content a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: #4caf50;
       color: white;
-    }
-
-    tbody tr:nth-child(odd) {
-      background-color: #e6ffe6;
-    }
-
-    tbody tr:nth-child(even) {
-      background-color: #f0f8ff;
-    }
-
-    a {
-      color: #007bff;
       text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .card-content a:hover {
+      background: #388e3c;
+    }
+
+    @media (max-width: 900px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 600px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
+      .card-grid {
+        grid-template-columns: 1fr;
       }
 
-      th {
-        position: absolute;
-        left: -9999px;
-        top: -9999px;
+      h1 {
+        font-size: 2rem;
       }
 
-      tr {
-        margin-bottom: 1rem;
+      .card-content h2 {
+        font-size: 1.3rem;
       }
 
-      td {
-        border: none;
-        padding: 0.5rem;
-        background: #f0f8ff;
-      }
-
-      td:before {
-        content: attr(data-label);
-        font-weight: bold;
-        display: block;
-        color: #4caf50;
+      .card-content p {
+        font-size: 0.95rem;
       }
     }
   </style>
 </head>
+
 <body>
+
+  
   <div class="container">
-    <h1>ML PROJECT</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Description</th>
-          <th>Certificate Link</th>
-        </tr>
-      </thead>
-      <tbody id="mlProject"></tbody>
-    </table>
+    <h1>ML Projects</h1>
+    <div class="card-grid">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="../Images/phishingURL.webp" alt="Phishing URL Detection">
+        <div class="card-content">
+          <h2>Phishing URL Detection via ML</h2>
+          <p>A machine learning project focused on detecting phishing URLs using intelligent classification techniques.
+          </p>
+          <a href="https://github.com/MrFailure777/URL-DETECTION" target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="../Images/housePrice.png" alt="House Price Prediction">
+        <div class="card-content">
+          <h2>House Price Prediction Using XGBoost</h2>
+          <p>Regression-based model to predict house prices using advanced boosting techniques and feature engineering.
+          </p>
+          <a href="https://github.com/MrFailure777/House-Price-Prediction-Using-XGBoost" target="_blank">View
+            Project</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <!-- <div class="card">
+        <img src="images/project3.jpg" alt="Project 3">
+        <div class="card-content">
+          <h2>Spam Email Classifier</h2>
+          <p>Natural language processing and ML techniques to classify spam emails with high accuracy.</p>
+          <a href="https://github.com/example/spam-classifier" target="_blank">View Project</a>
+        </div>
+      </div> -->
+
+    </div>
   </div>
-
-  <script>
-    const certificates = [
-      { description: "PHISHING URL DETECTION VIA ML", link: "https://github.com/MrFailure777/URL-DETECTION" },
-      // { description: "Research Paper - ISAI 2025 (NIT Sikkim)", link: "certificates/research_isai.pdf" },
-      // { description: "Web Development Bootcamp - 2024", link: "certificates/web_bootcamp.pdf" }
-    ];
-
-    const table = document.getElementById('mlProject');
-
-    certificates.forEach((cert, index) => {
-      const row = document.createElement('tr');
-      row.innerHTML = `
-        <td data-label="#">${index + 1}</td>
-        <td data-label="Description">${cert.description}</td>
-        <td data-label="Certificate Link"><a href="${cert.link}" target="_blank">View</a></td>
-      `;
-      table.appendChild(row);
-    });
-  </script>
 </body>
+
 </html>
