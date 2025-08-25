@@ -1,0 +1,112 @@
+/* Floating button */
+.chatbot-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #562fe3;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+
+  /* Animation যোগ করা হলো */
+  animation: pulse 2s infinite ease-in-out;
+}
+
+/* Keyframes */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);  /* 20% বড় হবে */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.chatbot-btn img {
+  width: 35px;
+}
+
+/* Chat window */
+.chat-window {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 320px;
+  height: 400px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  overflow: hidden;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.chat-header {
+  background: #25D366;
+  color: #fff;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+  background: #f9f9f9;
+}
+
+/* Messages */
+.message {
+  margin: 5px 0;
+  padding: 8px 12px;
+  border-radius: 15px;
+  max-width: 70%;
+  clear: both;
+}
+
+.user {
+  background: #007bff;
+  color: white;
+  float: right;
+  text-align: right;
+}
+
+.bot {
+  background: #e5e5e5;
+  color: black;
+  float: left;
+  text-align: left;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  padding: 10px;
+  border: none;
+  background: #25D366;
+  color: white;
+  cursor: pointer;
+}

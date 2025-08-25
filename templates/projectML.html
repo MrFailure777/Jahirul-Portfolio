@@ -117,14 +117,16 @@
 
 <body>
 
-  
+
   <div class="container">
     <h1>ML Projects</h1>
     <div class="card-grid">
 
       <!-- Card 1 -->
       <div class="card">
-        <img src="../image/phishingURL.webp" alt="Phishing URL Detection">
+        <!-- <img src="../image/phishingURL.webp" alt="Phishing URL Detection"> -->
+        <img src="{{ url_for('static', filename='image/phishingURL.webp') }}" alt=" Phishing URL Detection">
+
         <div class="card-content">
           <h2>Phishing URL Detection via ML</h2>
           <p>A machine learning project focused on detecting phishing URLs using intelligent classification techniques.
@@ -135,7 +137,8 @@
 
       <!-- Card 2 -->
       <div class="card">
-        <img src="../image/housePrice.png" alt="House Price Prediction">
+        <!-- <img src="../image/housePrice.png" alt="House Price Prediction"> -->
+        <img src="{{ url_for('static', filename='image/housePrice.png') }}" alt=" House Price Prediction">
         <div class="card-content">
           <h2>House Price Prediction Using XGBoost</h2>
           <p>Regression-based model to predict house prices using advanced boosting techniques and feature engineering.
